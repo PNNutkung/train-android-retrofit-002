@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">Retrofit Test</string>
+    <string name="main_activity_edit_text">Enter text here...</string>
+    <string name="main_activity_btn">Submit</string>
+</resources>
