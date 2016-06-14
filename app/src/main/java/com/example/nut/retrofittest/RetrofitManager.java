@@ -1,6 +1,7 @@
 package com.example.nut.retrofittest;
 
 import retrofit2.Retrofit;
+import retrofit2.converter.gson.GsonConverterFactory;
 
 /**
  * Created by nut on 13/6/2559.
@@ -16,8 +17,15 @@ public class RetrofitManager {
         return ourInstance;
     }
 
+    public Retrofit getRetrofit() {
+        return retrofit;
+    }
+
     private RetrofitManager() {
-        retrofit = new Retrofit.Builder().build();
+        retrofit = new Retrofit.Builder()
+                .baseUrl("https://api.github.com/")
+                .addConverterFactory(GsonConverterFactory.create())
+                .build();
     }
 
 
